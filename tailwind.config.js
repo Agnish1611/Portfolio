@@ -14,6 +14,7 @@ module.exports = {
         'pangaia-ultralight': ['PPPangaia-Ultralight', 'sans-serif'],
         'mono': ['var(--font-geist-mono)', 'ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
         'jetbrains': ['var(--font-jetbrains-mono)', 'ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+        'merienda': ['var(--font-merienda)', 'cursive'],
       },
     },
   },
