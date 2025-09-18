@@ -89,7 +89,7 @@ export default function Hero() {
         <div className="hidden lg:flex flex-col gap-[1px]">
           <GridDiv className="w-[100px] h-[100px]"></GridDiv>
           <GridDiv className="w-[100px] h-[100px]">[Prisma]</GridDiv>
-          <GridDiv className="w-[100px] h-[200px]"></GridDiv>
+          <GridDiv className="w-[100px] h-[201px]"></GridDiv>
         </div>
 
         <div className="lg:hidden w-[350px] flex flex-col gap-[1px]">
@@ -128,7 +128,7 @@ export default function Hero() {
               </h1>
               <p className="font-mono text-sm text-zinc-500 leading-relaxed text-center">
                 I'm a{" "}
-                <span className="text-red-500 font-semibold">developer</span>{" "}
+                <span className="text-red-500">developer</span>{" "}
                 who loves building projects around blockchain and full-stack
                 applications. I enjoy experimenting with new technologies,
                 winning hackathons, and creating Web3 solutions.
@@ -142,11 +142,11 @@ export default function Hero() {
         </div>
 
         <div className="hidden lg:flex flex-col gap-[1px]">
-          <GridDiv className="w-[100px] h-[200px] font-mono text-[#D1D5DB]">
+          <GridDiv className="w-[100px] h-[200px] font-mono">
             [Solana]
           </GridDiv>
           <GridDiv className="w-[100px] h-[100px]"></GridDiv>
-          <GridDiv className="w-[100px] h-[100px]">[Next Js]</GridDiv>
+          <GridDiv className="w-[100px] h-[101px]">[Next Js]</GridDiv>
         </div>
 
         <FlexSpacer className="rounded-l-lg" />
