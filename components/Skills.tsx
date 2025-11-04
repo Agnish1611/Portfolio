@@ -151,7 +151,7 @@ function Skills() {
                     onClick={() => setSelectedDomain(id)}
                     className={`flex font-mono gap-2 text-sm py-2 px-3 rounded-lg cursor-pointer transition-colors ${
                       selectedDomain === id
-                        ? "bg-zinc-100"
+                        ? "bg-zinc-200"
                         : "hover:bg-zinc-100"
                     }`}
                   >
@@ -232,7 +232,7 @@ function Skills() {
                     onClick={() => setSelectedDomain(id)}
                     className={`flex font-mono gap-2 text-xs py-2 px-3 rounded-lg cursor-pointer transition-colors ${
                       selectedDomain === id
-                        ? "bg-zinc-100"
+                        ? "bg-zinc-200"
                         : "hover:bg-zinc-100"
                     }`}
                   >
