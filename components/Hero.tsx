@@ -17,7 +17,7 @@ const GridDiv = ({
   children?: React.ReactNode;
 }) => (
   <div
-    className={`bg-[#f9f9f9] rounded-lg ${className} flex items-center justify-center text-xs font-mono text-zinc-400`}
+    className={`bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg ${className} flex items-center justify-center text-xs font-mono text-zinc-400`}
     style={style}
   >
     {children}
@@ -25,7 +25,7 @@ const GridDiv = ({
 );
 
 const FlexSpacer = ({ className }: { className: string }) => (
-  <div className={`bg-[#f9f9f9] flex-1 ${className}`}></div>
+  <div className={`bg-[#f9f9f9] dark:bg-zinc-900 flex-1 ${className}`}></div>
 );
 
 export default function Hero() {
@@ -35,7 +35,13 @@ export default function Hero() {
       className="lg:hidden"
       style={{ width: MOBILE_WIDTH, height: "100px" }}
     >
-      {index === 1 ? <LinesAnimation /> : index === 3 ? <SpiralAnimation /> : <div className="w-1.5 h-1.5 bg-[#E5E7EB]"></div>}
+      {index === 1 ? (
+        <LinesAnimation />
+      ) : index === 3 ? (
+        <SpiralAnimation />
+      ) : (
+        <div className="w-1.5 h-1.5 bg-[#E5E7EB] dark:bg-zinc-700"></div>
+      )}
     </GridDiv>
   ));
 
@@ -45,12 +51,14 @@ export default function Hero() {
       className="hidden lg:flex h-full items-center justify-center"
       style={{ width: DESKTOP_WIDTH }}
     >
-      {index === 2 ? `[TypeScript]` : index === 3 ? (
+      {index === 2 ? (
+        `[TypeScript]`
+      ) : index === 3 ? (
         <BlockchainAnimation />
       ) : index === 9 ? (
         `[Rust]`
       ) : (
-        <div className="w-1.5 h-1.5 bg-[#E5E7EB]"></div>
+        <div className="w-1.5 h-1.5 bg-[#E5E7EB] dark:bg-zinc-700"></div>
       )}
     </GridDiv>
   ));
@@ -62,14 +70,20 @@ export default function Hero() {
       ) : index === 3 ? (
         <></>
       ) : (
-        <div className="w-1.5 h-1.5 bg-[#E5E7EB]"></div>
+        <div className="w-1.5 h-1.5 bg-[#E5E7EB] dark:bg-zinc-700"></div>
       )}
     </GridDiv>
   ));
 
   const desktopVerticalItemsLeft = [...Array(4)].map((_, index) => (
     <GridDiv key={index} style={{ width: DESKTOP_WIDTH, height: GRID_HEIGHT }}>
-      {index === 1 ? <SpiralAnimation /> : index === 3 ? '[AWS]' : <div className='w-1.5 h-1.5 bg-[#E5E7EB]'></div>}
+      {index === 1 ? (
+        <SpiralAnimation />
+      ) : index === 3 ? (
+        "[AWS]"
+      ) : (
+        <div className="w-1.5 h-1.5 bg-[#E5E7EB] dark:bg-zinc-700"></div>
+      )}
     </GridDiv>
   ));
 
@@ -94,9 +108,9 @@ export default function Hero() {
 
         <div className="lg:hidden w-[350px] flex flex-col gap-[1px]">
           <div className="flex gap-[1px]">{mobileGridItems}</div>
-          <div className="h-[403px] bg-[#f9f9f9] rounded-lg p-8">
+          <div className="h-[403px] bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg p-8">
             <div className="flex flex-col gap-6">
-              <h1 className="font-pangaia-bold text-2xl text-black">
+              <h1 className="font-pangaia-bold text-2xl text-black dark:text-white">
                 I'm a Software Engineer from India
               </h1>
               <p className="font-mono text-sm text-zinc-600 leading-relaxed">
@@ -116,22 +130,21 @@ export default function Hero() {
           </div>
 
           <div
-            className="bg-[#f9f9f9] rounded-lg flex-shrink-0 p-8 flex justify-center items-center"
+            className="bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg flex-shrink-0 p-8 flex justify-center items-center"
             style={{
               width: "calc(8 * (1000px - 9px) / 10 + 7px)",
               height: TOTAL_HEIGHT,
             }}
           >
             <div className="flex flex-col gap-6">
-              <h1 className="font-pangaia-bold text-3xl text-black text-center">
+              <h1 className="font-pangaia-bold text-3xl text-black dark:text-white text-center">
                 I'm a Software Engineer from India
               </h1>
               <p className="font-mono text-sm text-zinc-500 leading-relaxed text-center">
-                I'm a{" "}
-                <span className="text-red-500">developer</span>{" "}
-                who loves building projects around blockchain and full-stack
-                applications. I enjoy experimenting with new technologies,
-                winning hackathons, and creating Web3 solutions.
+                I'm a <span className="text-red-500">developer</span> who loves
+                building projects around blockchain and full-stack applications.
+                I enjoy experimenting with new technologies, winning hackathons,
+                and creating Web3 solutions.
               </p>
             </div>
           </div>
@@ -142,9 +155,7 @@ export default function Hero() {
         </div>
 
         <div className="hidden lg:flex flex-col gap-[1px]">
-          <GridDiv className="w-[100px] h-[200px] font-mono">
-            [Solana]
-          </GridDiv>
+          <GridDiv className="w-[100px] h-[200px] font-mono">[Solana]</GridDiv>
           <GridDiv className="w-[100px] h-[100px]"></GridDiv>
           <GridDiv className="w-[100px] h-[101px]">[Next Js]</GridDiv>
         </div>

@@ -52,7 +52,7 @@ const SKILLS = [
 ];
 
 const FlexSpacer = ({ className }: { className: string }) => (
-  <div className={`bg-[#f9f9f9] flex-1 ${className}`}></div>
+  <div className={`bg-[#f9f9f9] dark:bg-zinc-900 flex-1 ${className}`}></div>
 );
 
 const DownloadIcon = () => {
@@ -88,14 +88,14 @@ function Skills() {
     <>
       <div className="w-screen flex gap-[1px] mt-[1px]">
         <FlexSpacer className="rounded-r-lg" />
-        <div className="w-[100px] h-[50px] bg-[#f9f9f9] rounded-lg hidden lg:block"></div>
+        <div className="w-[100px] h-[50px] bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"></div>
         <div
-          className="h-[50px] bg-[#f9f9f9] rounded-lg hidden lg:block"
+          className="h-[50px] bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"
           style={{ width: DESKTOP_WIDTH }}
         ></div>
         {/* Main content area */}
         <div className="w-[350px] lg:w-[calc(8*(1000px-9px)/10+7px)] h-[50px] flex gap-[1px]">
-          <div className="w-[calc(25%-1px)] lg:w-[calc(25%-1px)] h-full bg-[#f9f9f9] rounded-lg gap-2 items-center px-5 hidden lg:flex">
+          <div className="w-[calc(25%-1px)] lg:w-[calc(25%-1px)] h-full bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg gap-2 items-center px-5 hidden lg:flex">
             {[1, 2, 3].map((_, id) => {
               return (
                 <div
@@ -105,32 +105,32 @@ function Skills() {
               );
             })}
           </div>
-          <div className="w-full lg:w-[75%] h-full bg-[#f9f9f9] text-zinc-400 flex items-center px-5 lg:px-10 rounded-lg font-mono text-xs lg:text-sm">
+          <div className="w-full lg:w-[75%] h-full bg-[#f9f9f9] dark:bg-zinc-900 text-zinc-400 flex items-center px-5 lg:px-10 rounded-lg font-mono text-xs lg:text-sm">
             <div className="h-4 w-4 rounded-sm bg-zinc-300 mr-5"></div>
             https://agnish/
-            <span className="text-zinc-700">skills&expertise</span>
+            <span className="text-zinc-700 dark:text-zinc-200">skills&expertise</span>
           </div>
         </div>
         <div
-          className="h-[50px] bg-[#f9f9f9] rounded-lg hidden lg:block"
+          className="h-[50px] bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"
           style={{ width: DESKTOP_WIDTH }}
         ></div>
-        <div className="w-[100px] h-[50px] bg-[#f9f9f9] rounded-lg hidden lg:block"></div>
+        <div className="w-[100px] h-[50px] bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"></div>
         <FlexSpacer className="rounded-l-lg" />
       </div>
 
       <div className="w-screen flex gap-[1px] mt-[1px] h-fit lg:h-[300px]">
         <FlexSpacer className="rounded-r-lg" />
-        <div className="w-[100px] h-full bg-[#f9f9f9] rounded-lg hidden lg:block"></div>
+        <div className="w-[100px] h-full bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"></div>
         <div
-          className="h-full bg-[#f9f9f9] rounded-lg hidden lg:block"
+          className="h-full bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"
           style={{ width: DESKTOP_WIDTH }}
         ></div>
         
         {/* Desktop Layout */}
         <div className="w-[calc(8*(1000px-9px)/10+7px)] h-full hidden lg:flex gap-[1px]">
           <div className="w-[calc(25%-1px)] h-full bg-none rounded-lg flex flex-col gap-[1px]">
-            <div className="w-full h-[calc(20%-1px)] rounded-lg bg-[#f9f9f9] flex items-center px-5 gap-5">
+            <div className="w-full h-[calc(20%-1px)] rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex items-center px-5 gap-5">
               <div className="grid grid-cols-2 gap-[1px] w-fit">
                 {[...Array(4)].map((_, id) => {
                   return (
@@ -143,7 +143,7 @@ function Skills() {
               </div>
               <div className="text-zinc-400 font-mono">Domains</div>
             </div>
-            <div className="w-full h-[80%] rounded-lg bg-[#f9f9f9] p-1 flex flex-col gap-1">
+            <div className="w-full h-[80%] rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 p-1 flex flex-col gap-1">
               {DOMAINS.map((domain, id) => {
                 return (
                   <div
@@ -151,25 +151,25 @@ function Skills() {
                     onClick={() => setSelectedDomain(id)}
                     className={`flex font-mono gap-2 text-sm py-2 px-3 rounded-lg cursor-pointer transition-colors ${
                       selectedDomain === id
-                        ? "bg-zinc-200"
-                        : "hover:bg-zinc-100"
+                        ? "bg-zinc-200 dark:bg-zinc-700"
+                        : "hover:bg-zinc-100 dark:hover:bg-zinc-800"
                     }`}
                   >
                     <span className="text-zinc-400">#Domain{id + 1}</span>
-                    <span className="text-zinc-700">{domain}</span>
+                    <span className="text-zinc-700 dark:text-zinc-200">{domain}</span>
                   </div>
                 );
               })}
             </div>
           </div>
           <div className="w-[75%] h-full bg-none rounded-lg flex flex-col gap-[1px]">
-            <div className="h-[calc(20%-1px)] w-full bg-[#f9f9f9] rounded-lg flex items-center justify-center gap-20">
-              <div className="text-sm font-mono text-zinc-700">
+            <div className="h-[calc(20%-1px)] w-full bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg flex items-center justify-center gap-20">
+              <div className="text-sm font-mono text-zinc-700 dark:text-zinc-200">
                 [.download my resume]
               </div>
               <DownloadIcon />
             </div>
-            <div className="h-[80%] w-full bg-[#f9f9f9] rounded-lg p-4">
+            <div className="h-[80%] w-full bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg p-4">
               <div className="flex items-start gap-3 font-mono text-xs">
                 <span className="text-zinc-300 text-xs mt-0.5 w-6 flex-shrink-0">
                   {1}
@@ -189,7 +189,7 @@ function Skills() {
                     </span>
                     <div className="flex-1">
                       <span className="text-zinc-400 whitespace-pre">	{title}</span>
-                      <span className="text-zinc-700">: </span>
+                      <span className="text-zinc-700 dark:text-zinc-200">: </span>
                       <span className="text-red-500">{description}</span>
                     </div>
                   </div>
@@ -211,7 +211,7 @@ function Skills() {
         <div className="w-[350px] flex flex-col gap-[1px] lg:hidden">
           {/* Domains Section */}
           <div className="w-full h-fit bg-none rounded-lg flex flex-col gap-[1px]">
-            <div className="w-full h-fit py-2 rounded-lg bg-[#f9f9f9] flex items-center px-5 gap-5">
+            <div className="w-full h-fit py-2 rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex items-center px-5 gap-5">
               <div className="grid grid-cols-2 gap-[1px] w-fit">
                 {[...Array(4)].map((_, id) => {
                   return (
@@ -224,7 +224,7 @@ function Skills() {
               </div>
               <div className="text-zinc-400 font-mono text-sm">Domains</div>
             </div>
-            <div className="w-full h-fit rounded-lg bg-[#f9f9f9] p-2 flex flex-col gap-1">
+            <div className="w-full h-fit rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 p-2 flex flex-col gap-1">
               {DOMAINS.map((domain, id) => {
                 return (
                   <div
@@ -232,12 +232,12 @@ function Skills() {
                     onClick={() => setSelectedDomain(id)}
                     className={`flex font-mono gap-2 text-xs py-2 px-3 rounded-lg cursor-pointer transition-colors ${
                       selectedDomain === id
-                        ? "bg-zinc-200"
-                        : "hover:bg-zinc-100"
+                        ? "bg-zinc-200 dark:bg-zinc-700"
+                        : "hover:bg-zinc-100 dark:hover:bg-zinc-800"
                     }`}
                   >
                     <span className="text-zinc-400">#Domain{id + 1}</span>
-                    <span className="text-zinc-700">{domain}</span>
+                    <span className="text-zinc-700 dark:text-zinc-200">{domain}</span>
                   </div>
                 );
               })}
@@ -246,13 +246,13 @@ function Skills() {
 
           {/* Skills Section */}
           <div className="w-full h-fit bg-none rounded-lg flex flex-col gap-[1px]">
-            <div className="h-fit py-3 w-full bg-[#f9f9f9] rounded-lg flex items-center justify-center gap-8">
-              <div className="text-xs font-mono text-zinc-700">
+            <div className="h-fit py-3 w-full bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg flex items-center justify-center gap-8">
+              <div className="text-xs font-mono text-zinc-700 dark:text-zinc-200">
                 [.download my resume]
               </div>
               <DownloadIcon />
             </div>
-            <div className="w-full h-fit bg-[#f9f9f9] rounded-lg p-3">
+            <div className="w-full h-fit bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg p-3">
               <div className="flex items-start gap-2 font-mono text-xs">
                 <span className="text-zinc-300 text-xs mt-0.5 w-4 flex-shrink-0">
                   {1}
@@ -272,7 +272,7 @@ function Skills() {
                     </span>
                     <div className="flex-1">
                       <span className="text-zinc-400 whitespace-pre">	{title}</span>
-                      <span className="text-zinc-700">: </span>
+                      <span className="text-zinc-700 dark:text-zinc-200">: </span>
                       <span className="text-red-500 text-xs break-words">{description}</span>
                     </div>
                   </div>
@@ -291,10 +291,10 @@ function Skills() {
         </div>
         
         <div
-          className="h-full bg-[#f9f9f9] rounded-lg hidden lg:block"
+          className="h-full bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"
           style={{ width: DESKTOP_WIDTH }}
         ></div>
-        <div className="w-[100px] h-full bg-[#f9f9f9] rounded-lg hidden lg:block"></div>
+        <div className="w-[100px] h-full bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"></div>
         <FlexSpacer className="rounded-l-lg" />
       </div>
     </>
