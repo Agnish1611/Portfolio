@@ -117,12 +117,12 @@ export default function AboutContent() {
                   </span>
                   . Alongside my co-founders Yash and Aditya, I am focused on
                   building the next generation of tools for the creator economy.
-                  Whether I'm diving into a freelance backend project or
-                  refining a SaaS business model, I’m driven by the challenge of
+                  Whether I&apos;m diving into a freelance backend project or
+                  refining a SaaS business model, I&apos;m driven by the challenge of
                   turning lines of code into a functional, impactful product.
                 </p>
                 <p className="text-black dark:text-white font-pangaia-medium text-lg leading-snug pt-6 border-t border-zinc-200 dark:border-zinc-700 mt-6">
-                  I’m always looking for ways to push the boundaries of modern
+                  I&apos;m always looking for ways to push the boundaries of modern
                   web development and bridge the gap between a great idea and a
                   production-ready application.
                 </p>
@@ -131,7 +131,7 @@ export default function AboutContent() {
 
             <div className="flex flex-col gap-4 mt-4 border-t border-zinc-200 dark:border-zinc-700 pt-6">
               <div className="font-mono text-xs uppercase tracking-widest text-zinc-400">
-                // Connect
+                {/* // Connect */}
               </div>
               <div className="flex flex-col gap-3">
                 {[
@@ -208,7 +208,7 @@ export default function AboutContent() {
             {/* Socials Box */}
             <div className="bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg p-6">
               <div className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-4">
-                // Connect
+                {/* // Connect */}
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
@@ -267,7 +267,7 @@ export default function AboutContent() {
           >
             <div className="flex flex-col gap-10">
               <div className="font-mono text-xs uppercase tracking-widest text-zinc-400 border-b border-zinc-200 pb-2 flex justify-between">
-                <span>// Introduction</span>
+                <span>{"// Introduction"}</span>
                 <span>Agnish</span>
               </div>
 
@@ -303,12 +303,12 @@ export default function AboutContent() {
                   </span>
                   . Alongside my co-founders Yash and Aditya, I am focused on
                   building the next generation of tools for the creator economy.
-                  Whether I'm diving into a freelance backend project or
-                  refining a SaaS business model, I’m driven by the challenge of
+                  Whether I&apos;m diving into a freelance backend project or
+                  refining a SaaS business model, I&apos;m driven by the challenge of
                   turning lines of code into a functional, impactful product.
                 </p>
                 <p className="text-black dark:text-white font-pangaia-medium text-xl leading-snug pt-6 border-t border-zinc-200 mt-8">
-                  I’m always looking for ways to push the boundaries of modern
+                  I&apos;m always looking for ways to push the boundaries of modern
                   web development and bridge the gap between a great idea and a
                   production-ready application.
                 </p>

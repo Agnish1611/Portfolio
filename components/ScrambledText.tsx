@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface ScrambledTextProps {
   texts: string[];
@@ -17,7 +17,7 @@ const ScrambledText = ({ texts }: ScrambledTextProps) => {
     return chars[Math.floor(Math.random() * chars.length)];
   };
 
-  const scrambleToText = (targetText: string) => {
+  const scrambleToText = useCallback((targetText: string) => {
     setIsScrambling(true);
     const duration = 800;
     const frameRate = 50;
@@ -48,7 +48,7 @@ const ScrambledText = ({ texts }: ScrambledTextProps) => {
         setIsScrambling(false);
       }
     }, frameRate);
-  };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -58,7 +58,7 @@ const ScrambledText = ({ texts }: ScrambledTextProps) => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [currentIndex, texts]);
+  }, [currentIndex, texts, scrambleToText]);
 
   return (
     <span

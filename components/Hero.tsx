@@ -111,10 +111,10 @@ export default function Hero() {
           <div className="h-[403px] bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg p-8">
             <div className="flex flex-col gap-6">
               <h1 className="font-pangaia-bold text-2xl text-black dark:text-white">
-                I'm a Software Engineer from India
+                I&apos;m a Software Engineer from India
               </h1>
               <p className="font-mono text-sm text-zinc-600 leading-relaxed">
-                I'm a{" "}
+                I&apos;m a{" "}
                 <span className="text-red-500 font-semibold">developer</span>{" "}
                 who loves building projects around blockchain and full-stack
                 applications. I enjoy experimenting with new technologies,
@@ -138,10 +138,10 @@ export default function Hero() {
           >
             <div className="flex flex-col gap-6">
               <h1 className="font-pangaia-bold text-3xl text-black dark:text-white text-center">
-                I'm a Software Engineer from India
+                I&apos;m a Software Engineer from India
               </h1>
               <p className="font-mono text-sm text-zinc-500 leading-relaxed text-center">
-                I'm a <span className="text-red-500">developer</span> who loves
+                I&apos;m a <span className="text-red-500">developer</span> who loves
                 building projects around blockchain and full-stack applications.
                 I enjoy experimenting with new technologies, winning hackathons,
                 and creating Web3 solutions.

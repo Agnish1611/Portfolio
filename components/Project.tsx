@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useCallback, useEffect } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 import useEmblaCarousel from "embla-carousel-react";
+import { EmblaCarouselType } from "embla-carousel";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const FlexSpacer = ({ className }: { className: string }) => (
@@ -11,7 +12,7 @@ const FlexSpacer = ({ className }: { className: string }) => (
 );
 
 // Real Embla hooks
-const usePrevNextButtons = (emblaApi: any) => {
+const usePrevNextButtons = (emblaApi: EmblaCarouselType | undefined) => {
   const [prevBtnDisabled, setPrevBtnDisabled] = React.useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = React.useState(true);
 
@@ -46,7 +47,7 @@ const usePrevNextButtons = (emblaApi: any) => {
   };
 };
 
-const useDotButton = (emblaApi: any) => {
+const useDotButton = (emblaApi: EmblaCarouselType | undefined) => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
 
@@ -88,7 +89,7 @@ const EmblaCarousel = ({
   onDotButtonClick,
 }: {
   images: string[];
-  emblaRef: any;
+  emblaRef: (node: HTMLElement | null) => void;
   selectedIndex: number;
   onDotButtonClick: (index: number) => void;
 }) => {
@@ -154,7 +155,7 @@ function Project({
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+  const { selectedIndex, onDotButtonClick } =
     useDotButton(emblaApi);
 
   const formattedIndex = (index + 1).toString().padStart(2, "0");
