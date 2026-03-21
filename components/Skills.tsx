@@ -105,11 +105,11 @@ function Skills() {
               );
             })}
           </div>
-          <div className="w-full lg:w-[75%] h-full bg-[#f9f9f9] dark:bg-zinc-900 text-zinc-400 flex items-center px-5 lg:px-10 rounded-lg font-mono text-xs lg:text-sm">
+          <h2 className="w-full lg:w-[75%] h-full bg-[#f9f9f9] dark:bg-zinc-900 text-zinc-400 flex items-center px-5 lg:px-10 rounded-lg font-mono text-xs lg:text-sm">
             <div className="h-4 w-4 rounded-sm bg-zinc-300 mr-5"></div>
             https://agnish/
             <span className="text-zinc-700 dark:text-zinc-200">skills&expertise</span>
-          </div>
+          </h2>
         </div>
         <div
           className="h-[50px] bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg hidden lg:block"

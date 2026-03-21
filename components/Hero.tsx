@@ -110,9 +110,9 @@ export default function Hero() {
           <div className="flex gap-[1px]">{mobileGridItems}</div>
           <div className="h-[403px] bg-[#f9f9f9] dark:bg-zinc-900 rounded-lg p-8">
             <div className="flex flex-col gap-6">
-              <h1 className="font-pangaia-bold text-2xl text-black dark:text-white">
+              <h2 className="font-pangaia-bold text-2xl text-black dark:text-white">
                 I&apos;m a Software Engineer from India
-              </h1>
+              </h2>
               <p className="font-mono text-sm text-zinc-600 leading-relaxed">
                 I&apos;m a{" "}
                 <span className="text-red-500 font-semibold">developer</span>{" "}
