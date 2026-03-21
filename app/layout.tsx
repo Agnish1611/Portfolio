@@ -24,10 +24,11 @@ const merienda = Merienda({
 
 export const metadata: Metadata = {
   title: "Agnish Bhattacharya | Software Engineer & Web3 Developer",
-  description: "I am Agnish Bhattacharya, a Full-Stack Software Engineer from India specializing in Next.js, scalable system architectures, and Web3 blockchain solutions.",
-  metadataBase: new URL('https://agnishbhattacharya.in'),
+  description:
+    "I am Agnish Bhattacharya, a Full-Stack Software Engineer from India specializing in Next.js, scalable system architectures, and Web3 blockchain solutions.",
+  metadataBase: new URL("https://agnishbhattacharya.in"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     title: "Agnish Bhattacharya | Software Engineer",
@@ -57,7 +58,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${merienda.variable} antialiased transition-colors duration-300`}
       >
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black"
+        >
           Skip to main content
         </a>
         <Providers>{children}</Providers>
