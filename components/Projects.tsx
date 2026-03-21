@@ -52,7 +52,8 @@ function Projects() {
   ];
 
   return (
-    <>
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading" className="sr-only">Projects</h2>
       {projects.map((project, index) => (
         <Project
           key={index}
@@ -66,7 +67,7 @@ function Projects() {
           index={index}
         />
       ))}
-    </>
+    </section>
   );
 }
 

@@ -83,6 +83,7 @@ export default function AboutContent() {
                 className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
                 sizes="100vw"
                 priority
+                fetchPriority="high"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -142,23 +143,24 @@ export default function AboutContent() {
                   },
                   {
                     name: "LinkedIn",
-                    href: "#",
+                    href: "https://linkedin.com/in/agnish",
                     icon: <FaLinkedinIn className="text-lg" />,
                   },
                   {
                     name: "Twitter",
-                    href: "#",
+                    href: "https://twitter.com/AgnishBhat",
                     icon: <FaXTwitter className="text-lg" />,
                   },
                   {
                     name: "GitHub",
-                    href: "#",
+                    href: "https://github.com/agnish",
                     icon: <FaGithub className="text-lg" />,
                   },
                 ].map((social) => (
                   <a
                     key={social.name}
                     href={social.href}
+                    aria-label={social.name}
                     className="group relative flex items-center justify-between p-4 overflow-hidden rounded-xl bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 transition-all duration-500 hover:border-black dark:hover:border-zinc-500 hover:shadow-md"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -199,6 +201,7 @@ export default function AboutContent() {
                 className="object-cover object-center transition-transform hover:scale-105 duration-700 ease-in-out grayscale hover:grayscale-0"
                 sizes="33vw"
                 priority
+                fetchPriority="high"
               />
               <div className="absolute top-4 left-4 font-mono text-xs text-zinc-500 dark:text-zinc-400 z-10 bg-white/80 dark:bg-zinc-900/80 px-2 py-1 rounded">
                 [.profile]
@@ -219,23 +222,24 @@ export default function AboutContent() {
                   },
                   {
                     name: "LinkedIn",
-                    href: "#",
+                    href: "https://linkedin.com/in/agnish",
                     icon: <FaLinkedinIn className="text-lg" />,
                   },
                   {
                     name: "Twitter",
-                    href: "#",
+                    href: "https://twitter.com/AgnishBhat",
                     icon: <FaXTwitter className="text-lg" />,
                   },
                   {
                     name: "GitHub",
-                    href: "#",
+                    href: "https://github.com/agnish",
                     icon: <FaGithub className="text-lg" />,
                   },
                 ].map((social) => (
                   <a
                     key={social.name}
                     href={social.href}
+                    aria-label={social.name}
                     className="group relative flex items-center justify-between p-4 overflow-hidden rounded-xl bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 transition-all duration-500 hover:border-black dark:hover:border-zinc-500 hover:shadow-md"
                     target="_blank"
                     rel="noopener noreferrer"

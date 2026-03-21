@@ -87,11 +87,13 @@ const EmblaCarousel = ({
   emblaRef,
   selectedIndex,
   onDotButtonClick,
+  projectIndex,
 }: {
   images: string[];
   emblaRef: (node: HTMLElement | null) => void;
   selectedIndex: number;
   onDotButtonClick: (index: number) => void;
+  projectIndex: number;
 }) => {
   return (
     <div className="h-[519px] w-full rounded-lg bg-gradient-to-t from-[#EDEDED] dark:from-zinc-800 to-[#f9f9f9] dark:to-zinc-900 p-5 relative overflow-hidden">
@@ -105,6 +107,8 @@ const EmblaCarousel = ({
                 width={800}
                 height={500}
                 className="w-full h-full object-contain rounded-lg"
+                priority={projectIndex === 0}
+                fetchPriority={projectIndex === 0 ? "high" : "auto"}
               />
             </div>
           ))}
@@ -212,13 +216,14 @@ function Project({
               emblaRef={emblaRef}
               selectedIndex={selectedIndex}
               onDotButtonClick={onDotButtonClick}
+              projectIndex={index}
             />
             <div className="h-[250px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex justify-between items-start px-5 py-10 gap-5">
               <div className="flex flex-col gap-4 font-pangaia-medium flex-1">
                 <div className="text-black dark:text-white text-xl">{title}</div>
-                <div className="text-sm text-zinc-500 line-clamp-3 leading-relaxed max-w-2xl">
+                <p className="text-sm text-zinc-500 line-clamp-3 leading-relaxed max-w-2xl">
                   {description}
-                </div>
+                </p>
                 {techStack && (
                   <div className="flex flex-wrap gap-2 mt-2">
                     {techStack.map((tech, i) => (
@@ -297,6 +302,7 @@ function Project({
                emblaRef={emblaRef}
                selectedIndex={selectedIndex}
                onDotButtonClick={onDotButtonClick}
+               projectIndex={index}
              />
              <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10">
                 <button
@@ -325,9 +331,9 @@ function Project({
           <div className="h-fit w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex flex-col px-5 py-8 gap-5">
             <div className="flex flex-col gap-3 font-pangaia-medium">
               <div className="text-black dark:text-white text-lg leading-tight">{title}</div>
-              <div className="text-sm text-zinc-500 leading-relaxed">
+              <p className="text-sm text-zinc-500 leading-relaxed">
                 {description}
-              </div>
+              </p>
               {techStack && (
                 <div className="flex flex-wrap gap-2 mt-2">
                   {techStack.map((tech, i) => (

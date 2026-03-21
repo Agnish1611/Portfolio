@@ -55,7 +55,7 @@ export default function Navbar({
   }`;
 
   return (
-    <div className="w-screen flex flex-col gap-[1px] transition-all duration-500 ease-in-out">
+    <nav className="w-screen flex flex-col gap-[1px] transition-all duration-500 ease-in-out">
       <div className="flex gap-[1px] h-[6rem]">
         <NavSpacer className="rounded-r-lg" />
         <NavFixedDiv className="hidden lg:block" />
@@ -127,6 +127,6 @@ export default function Navbar({
           }`}
         ></div>
       </div>
-    </div>
+    </nav>
   );
 }
