@@ -159,8 +159,7 @@ function Project({
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
-  const { selectedIndex, onDotButtonClick } =
-    useDotButton(emblaApi);
+  const { selectedIndex, onDotButtonClick } = useDotButton(emblaApi);
 
   const formattedIndex = (index + 1).toString().padStart(2, "0");
 
@@ -210,7 +209,7 @@ function Project({
                 <span className="text-zinc-700">see featured works</span>
               </div>
               <div className="text-zinc-400">
-                <span className="text-red-500">{formattedIndex}</span>/03
+                <span className="text-red-500">{formattedIndex}</span>/04
               </div>
             </div>
             <EmblaCarousel
@@ -222,7 +221,9 @@ function Project({
             />
             <div className="h-[250px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex justify-between items-start px-5 py-10 gap-5">
               <div className="flex flex-col gap-4 font-pangaia-medium flex-1">
-                <div className="text-black dark:text-white text-xl">{title}</div>
+                <div className="text-black dark:text-white text-xl">
+                  {title}
+                </div>
                 <p className="text-sm text-zinc-500 line-clamp-3 leading-relaxed max-w-2xl">
                   {description}
                 </p>
@@ -290,49 +291,57 @@ function Project({
         <div className="w-[90vw] md:w-[600px] flex flex-col gap-[1px] flex-shrink-0">
           <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex flex-col justify-center px-4 font-mono text-sm gap-1">
             <div className="flex justify-between w-full">
-              <span className="text-red-500 text-xs">[{formattedIndex}/03]</span>
+              <span className="text-red-500 text-xs">
+                [{formattedIndex}/03]
+              </span>
               <span className="text-zinc-500 text-xs">[{year}]</span>
             </div>
             <div className="text-zinc-700 dark:text-zinc-300 text-xs truncate">
               {name}
             </div>
           </div>
-          
+
           <div className="relative">
-             <EmblaCarousel
-               images={images}
-               emblaRef={emblaRef}
-               selectedIndex={selectedIndex}
-               onDotButtonClick={onDotButtonClick}
-               projectIndex={index}
-             />
-             <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10">
-                <button
-                  onClick={onPrevButtonClick}
-                  disabled={prevBtnDisabled}
-                  className={`p-2 rounded-full bg-black/20 text-white transition-colors ${
-                    prevBtnDisabled ? "opacity-30 cursor-not-allowed" : "hover:bg-black/40"
-                  }`}
-                >
-                  <FaChevronLeft className="text-sm" />
-                </button>
-             </div>
-             <div className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10">
-                <button
-                  onClick={onNextButtonClick}
-                  disabled={nextBtnDisabled}
-                  className={`p-2 rounded-full bg-black/20 text-white transition-colors ${
-                    nextBtnDisabled ? "opacity-30 cursor-not-allowed" : "hover:bg-black/40"
-                  }`}
-                >
-                  <FaChevronRight className="text-sm" />
-                </button>
-             </div>
+            <EmblaCarousel
+              images={images}
+              emblaRef={emblaRef}
+              selectedIndex={selectedIndex}
+              onDotButtonClick={onDotButtonClick}
+              projectIndex={index}
+            />
+            <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10">
+              <button
+                onClick={onPrevButtonClick}
+                disabled={prevBtnDisabled}
+                className={`p-2 rounded-full bg-black/20 text-white transition-colors ${
+                  prevBtnDisabled
+                    ? "opacity-30 cursor-not-allowed"
+                    : "hover:bg-black/40"
+                }`}
+              >
+                <FaChevronLeft className="text-sm" />
+              </button>
+            </div>
+            <div className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10">
+              <button
+                onClick={onNextButtonClick}
+                disabled={nextBtnDisabled}
+                className={`p-2 rounded-full bg-black/20 text-white transition-colors ${
+                  nextBtnDisabled
+                    ? "opacity-30 cursor-not-allowed"
+                    : "hover:bg-black/40"
+                }`}
+              >
+                <FaChevronRight className="text-sm" />
+              </button>
+            </div>
           </div>
 
           <div className="h-fit w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex flex-col px-5 py-8 gap-5">
             <div className="flex flex-col gap-3 font-pangaia-medium">
-              <div className="text-black dark:text-white text-lg leading-tight">{title}</div>
+              <div className="text-black dark:text-white text-lg leading-tight">
+                {title}
+              </div>
               <p className="text-sm text-zinc-500 leading-relaxed">
                 {description}
               </p>
@@ -356,7 +365,9 @@ function Project({
                 rel="noopener noreferrer"
                 className="flex items-center justify-between px-5 py-3 bg-black dark:bg-zinc-100 text-white dark:text-black rounded-xl transition-all duration-300 hover:bg-red-500 dark:hover:bg-red-500 group w-full mt-4"
               >
-                <span className="font-mono text-xs uppercase tracking-widest">View Project</span>
+                <span className="font-mono text-xs uppercase tracking-widest">
+                  View Project
+                </span>
                 <FiArrowUpRight className="text-white dark:text-black text-sm group-hover:text-white transition-colors duration-300" />
               </a>
             )}
