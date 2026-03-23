@@ -168,25 +168,27 @@ function Project({
     <>
       <div className="hidden lg:flex w-screen gap-[1px] mt-[1px] h-[100px]">
         <FlexSpacer className="rounded-r-lg" />
-        <div className="h-full w-[100px] rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
-        <div className="h-full w-[99px] rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
-        <div className="h-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 w-[calc(8*(1000px-9px)/10+7px)]"></div>
-        <div className="h-full w-[99px] rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
-        <div className="h-full w-[100px] rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+        <div className="w-[95vw] lg:w-[90vw] xl:w-[1200px] max-w-[1200px] grid grid-cols-12 gap-[1px] flex-shrink-0">
+          <div className="h-full col-span-1 w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+          <div className="h-full col-span-1 w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+          <div className="h-full col-span-8 w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+          <div className="h-full col-span-1 w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+          <div className="h-full col-span-1 w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+        </div>
         <FlexSpacer className="rounded-l-lg" />
       </div>
 
       <div className="hidden lg:flex w-screen gap-[1px] mt-[1px] h-fit">
         <FlexSpacer className="rounded-r-lg" />
-        <div className="h-[850px] w-fit rounded-lg flex gap-[1px]">
-          <div className="h-full w-[100px] rounded-lg flex flex-col gap-[1px]">
-            <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
-            <div className="h-[519px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
-            <div className="h-[250px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+        <div className="h-[850px] w-[95vw] lg:w-[90vw] xl:w-[1200px] max-w-[1200px] rounded-lg grid grid-cols-12 gap-[1px] flex-shrink-0">
+          <div className="h-full col-span-1 w-full rounded-lg grid grid-rows-[80px_519px_250px] gap-[1px]">
+            <div className="w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+            <div className="w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+            <div className="w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
           </div>
-          <div className="h-full w-[99px] rounded-lg flex flex-col gap-[1px]">
-            <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
-            <div className="h-[519px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex items-center justify-center">
+          <div className="h-full col-span-1 w-full rounded-lg grid grid-rows-[80px_519px_250px] gap-[1px]">
+            <div className="w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
+            <div className="w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex items-center justify-center">
               <button
                 onClick={onPrevButtonClick}
                 disabled={prevBtnDisabled}
@@ -201,8 +203,8 @@ function Project({
             </div>
             <div className="h-[250px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
           </div>
-          <div className="h-full w-[calc(8*(1000px-9px)/10+7px)] rounded-lg flex flex-col gap-[1px]">
-            <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex justify-between px-10 items-center font-mono text-sm">
+          <div className="h-full col-span-8 w-full rounded-lg flex flex-col gap-[1px]">
+            <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex justify-between px-4 lg:px-10 items-center font-mono text-sm">
               <div className="flex gap-5 text-xs">
                 <span className="text-red-500">[.scroll]</span>
                 <span className="text-zinc-700">see featured works</span>
@@ -256,7 +258,7 @@ function Project({
               </div>
             </div>
           </div>
-          <div className="h-full w-[99px] rounded-lg flex flex-col gap-[1px]">
+          <div className="h-full col-span-1 w-full rounded-lg flex flex-col gap-[1px]">
             <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
             <div className="h-[519px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex items-center justify-center">
               <button
@@ -273,7 +275,7 @@ function Project({
             </div>
             <div className="h-[250px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
           </div>
-          <div className="h-full w-[100px] rounded-lg flex flex-col gap-[1px]">
+          <div className="h-full col-span-1 w-full rounded-lg flex flex-col gap-[1px]">
             <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
             <div className="h-[519px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
             <div className="h-[250px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
@@ -285,7 +287,7 @@ function Project({
       {/* Mobile Layout */}
       <div className="lg:hidden w-screen flex gap-[1px] mt-[1px] h-fit overflow-hidden">
         <FlexSpacer className="rounded-r-lg" />
-        <div className="w-[350px] flex flex-col gap-[1px] flex-shrink-0">
+        <div className="w-[90vw] md:w-[600px] flex flex-col gap-[1px] flex-shrink-0">
           <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex flex-col justify-center px-4 font-mono text-sm gap-1">
             <div className="flex justify-between w-full">
               <span className="text-red-500 text-xs">[{formattedIndex}/03]</span>
