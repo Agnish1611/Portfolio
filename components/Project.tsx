@@ -152,14 +152,23 @@ function Project({
   link,
   techStack,
 }: ProjectProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel();
+  const [desktopEmblaRef, desktopEmblaApi] = useEmblaCarousel();
   const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
-  const { selectedIndex, onDotButtonClick } = useDotButton(emblaApi);
+    prevBtnDisabled: desktopPrevBtnDisabled,
+    nextBtnDisabled: desktopNextBtnDisabled,
+    onPrevButtonClick: onDesktopPrevButtonClick,
+    onNextButtonClick: onDesktopNextButtonClick,
+  } = usePrevNextButtons(desktopEmblaApi);
+  const { selectedIndex: desktopSelectedIndex, onDotButtonClick: onDesktopDotButtonClick } = useDotButton(desktopEmblaApi);
+
+  const [mobileEmblaRef, mobileEmblaApi] = useEmblaCarousel();
+  const {
+    prevBtnDisabled: mobilePrevBtnDisabled,
+    nextBtnDisabled: mobileNextBtnDisabled,
+    onPrevButtonClick: onMobilePrevButtonClick,
+    onNextButtonClick: onMobileNextButtonClick,
+  } = usePrevNextButtons(mobileEmblaApi);
+  const { selectedIndex: mobileSelectedIndex, onDotButtonClick: onMobileDotButtonClick } = useDotButton(mobileEmblaApi);
 
   const formattedIndex = (index + 1).toString().padStart(2, "0");
 
@@ -189,10 +198,10 @@ function Project({
             <div className="w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
             <div className="w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex items-center justify-center">
               <button
-                onClick={onPrevButtonClick}
-                disabled={prevBtnDisabled}
+                onClick={onDesktopPrevButtonClick}
+                disabled={desktopPrevBtnDisabled}
                 className={`text-2xl transition-colors ${
-                  prevBtnDisabled
+                  desktopPrevBtnDisabled
                     ? "text-gray-400 cursor-not-allowed"
                     : "text-red-500 cursor-pointer hover:text-red-600"
                 }`}
@@ -214,9 +223,9 @@ function Project({
             </div>
             <EmblaCarousel
               images={images}
-              emblaRef={emblaRef}
-              selectedIndex={selectedIndex}
-              onDotButtonClick={onDotButtonClick}
+              emblaRef={desktopEmblaRef}
+              selectedIndex={desktopSelectedIndex}
+              onDotButtonClick={onDesktopDotButtonClick}
               projectIndex={index}
             />
             <div className="h-[250px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex justify-between items-start px-5 py-10 gap-5">
@@ -263,10 +272,10 @@ function Project({
             <div className="h-[80px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900"></div>
             <div className="h-[519px] w-full rounded-lg bg-[#f9f9f9] dark:bg-zinc-900 flex items-center justify-center">
               <button
-                onClick={onNextButtonClick}
-                disabled={nextBtnDisabled}
+                onClick={onDesktopNextButtonClick}
+                disabled={desktopNextBtnDisabled}
                 className={`text-2xl transition-colors ${
-                  nextBtnDisabled
+                  desktopNextBtnDisabled
                     ? "text-gray-400 cursor-not-allowed"
                     : "text-red-500 cursor-pointer hover:text-red-600"
                 }`}
@@ -304,17 +313,17 @@ function Project({
           <div className="relative">
             <EmblaCarousel
               images={images}
-              emblaRef={emblaRef}
-              selectedIndex={selectedIndex}
-              onDotButtonClick={onDotButtonClick}
+              emblaRef={mobileEmblaRef}
+              selectedIndex={mobileSelectedIndex}
+              onDotButtonClick={onMobileDotButtonClick}
               projectIndex={index}
             />
             <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10">
               <button
-                onClick={onPrevButtonClick}
-                disabled={prevBtnDisabled}
+                onClick={onMobilePrevButtonClick}
+                disabled={mobilePrevBtnDisabled}
                 className={`p-2 rounded-full bg-black/20 text-white transition-colors ${
-                  prevBtnDisabled
+                  mobilePrevBtnDisabled
                     ? "opacity-30 cursor-not-allowed"
                     : "hover:bg-black/40"
                 }`}
@@ -324,10 +333,10 @@ function Project({
             </div>
             <div className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10">
               <button
-                onClick={onNextButtonClick}
-                disabled={nextBtnDisabled}
+                onClick={onMobileNextButtonClick}
+                disabled={mobileNextBtnDisabled}
                 className={`p-2 rounded-full bg-black/20 text-white transition-colors ${
-                  nextBtnDisabled
+                  mobileNextBtnDisabled
                     ? "opacity-30 cursor-not-allowed"
                     : "hover:bg-black/40"
                 }`}
