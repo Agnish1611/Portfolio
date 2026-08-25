@@ -29,13 +29,12 @@ const SKILLS = [
 
   // DevOps & Cloud
   [
-    ["cloud providers", "AWS"],
+    ["cloud providers", "AWS(EC2, S3, SQS, Lambda)"],
     ["containerization", "Docker"],
     ["orchestration", "Kubernetes"],
     ["CI/CD", "GitHub Actions, GitLab CI"],
-    ["monitoring & logging", "Prometheus, Grafana"],
-    ["version control", "Git, GitHub, GitLab"],
-    ["experience", "1+ years"],
+    ["version control", "Git, GitHub"],
+    ["experience", "<1 years"],
   ],
 
   // Blockchain
